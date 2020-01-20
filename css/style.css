@@ -1,0 +1,697 @@
+
+/* reset
+---------------------------------------------------- */
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/*---------------------------------------------------- */
+
+
+/* clearfix
+---------------------------------------------------- */
+
+.clearfix {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  
+  /*---------------------------------------------------- */
+  
+  
+  
+  
+  /* フォント初期サイズ　（カスタム可）
+  ---------------------------------------------------- */
+  
+  html {
+    font-size: 8px;
+  }
+  
+  @media (min-width:768px),
+  print {
+    html {
+      font-size: 9px;
+    }
+  }
+  
+  @media (min-width:992px),
+  print {
+  
+    html {
+      font-size: 10px;
+    }
+  
+  }
+  
+  /*---------------------------------------------------- */
+  
+  
+  
+  
+  /* 初期設定　行間、フォント、文字色　（カスタム可）
+  ---------------------------------------------------- */
+  
+  
+  body {
+    letter-spacing: 0.05em;
+    color: #333;
+    font-family: 'メイリオ', 'Meiryo', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'ＭＳ Ｐゴシック', sans-serif;
+  }
+  
+  p {
+    font-size: 1.4rem;
+    line-height: 2em;
+  }
+  
+  /*---------------------------------------------------- */
+  
+  
+  
+  
+  /* 印刷設定
+  ---------------------------------------------------- */
+  
+  @media print {
+    body {
+      zoom: 0.68;
+      -webkit-print-color-adjust: exact;
+    }
+  }
+  
+  /* IE10以上 */
+  @media print and (-ms-high-contrast: none) {
+  
+    /* @pageの指定いらないかも */
+    @page {
+      size: A4;
+      margin: 12.7mm 9.7mm;
+    }
+  
+    body {
+      zoom: 1.8;
+      width: 1200px;
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+    }
+  }
+  
+  
+  @media print {
+    a[href]:after {
+      content: "" !important;
+    }
+  
+    abbr[title]:after {
+      content: "" !important;
+    }
+  }
+  
+  /*---------------------------------------------------- */
+
+
+  /* ------------------ 作業 ------------------ */
+
+header{
+    border-top: 3px solid #39622a;
+    position: relative;
+}
+
+.header-content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2%;
+}
+
+@media (min-width:992px){
+    .header-content{
+        width: 90%;
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0;
+    }
+}
+
+.right-header{
+    background: #000;
+    color: #fff;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100%;
+    padding-top: 70px;
+    transform: translateX(100%);
+    -webkit-transition: transform 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: transform 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.right-header{
+    background: #fff;
+    color: #fff;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100%;
+    padding-top: 70px;
+    transform: translateX(100%);
+    -webkit-transition: transform 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: transform 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.open .right-header{
+    transform: translateX(0%);
+}
+
+@media (min-width: 992px),print{
+
+.right-header{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: unset;
+    z-index: unset;
+    width: unset;
+    height: auto;
+    padding: 0;
+    transform: unset;
+    background-color: #fff;
+}
+
+}
+
+
+
+/* ハンバーガーボタン */
+
+header .h-btn {
+    position: absolute;
+    z-index: 1000;
+    top: 0;    /*btnの位置*/
+    right: 2%;  /*btnの位置*/
+    width: 50px;
+    height: 50px;
+    border: 0;   /*初期で入っているborderを0にする。spanの位置がずれる為*/
+    padding: 0; /*初期で入っているpaddingを0にする。spanの位置がずれる為*/
+    background-color: #39622a;
+    cursor: pointer;
+  }
+  
+  @media (min-width: 992px),print{
+  
+  header .h-btn {
+    display: none;
+  }
+  
+  }
+  
+  .open .h-btn {
+    background-color: #39622a;
+  }
+  
+  header .h-btn span {
+    position: absolute;
+    left: 10px;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    -webkit-transition: top .5s ease, transform .3s ease-in-out;
+    transition: top .5s ease, transform .3s ease-in-out;
+  }
+  
+  /*----ハンバーガー 線----*/
+  
+  header .h-btn span:nth-child(1) {
+    top: 10px;
+  }
+  
+  header .h-btn span:nth-child(2) {
+    top: 24px;
+  }
+  
+  header .h-btn span:nth-child(3) {
+    top: 38px;
+  }
+  
+  /*----ハンバーガー 線 h-btn,h-backをクリックした時にopenが付く。----*/
+  
+  /*ハンバガー1番目を中央に寄せて回転*/
+  header.open .h-btn span:nth-child(1) {
+    top: 25px;
+    transform: rotate(45deg);
+  }
+  
+  /*ハンバガー2番目を無くす*/
+  header.open .h-btn span:nth-child(2) {
+    display: none;
+  }
+  
+  
+  /*ハンバガー3番目を中央に寄せて回転*/
+  .open .h-btn span:nth-child(3) {
+    top: 25px;
+    transform: rotate(-45deg);
+  }
+  
+  /*----background----*/
+  
+  .h-back {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    transform: translateX(100%);
+    transition: opacity 0.5s ease;
+  }
+
+   .open .h-back{
+       transform: translateX(0);
+       opacity: 0.5;
+   }
+
+   .global-nav li{
+    display: block;
+    border-top: 1px solid #cccccc;
+}
+
+.global-nav li:last-child{
+    border-bottom: 1px solid #cccccc;
+}
+
+.global-nav li a{
+    display: block;
+    color: #333333;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+@media (min-width:992px){
+
+.global-nav li{
+    display: inline-block;
+    border: unset;
+}
+
+.global-nav li:last-child{
+    border-bottom: unset;
+}
+
+.global-nav li a{
+    padding: 0 15px;
+}
+}
+
+
+/* 現在のコンテンツアクティブ */
+.global-nav li a.now-active{
+    color: #39622a;
+    text-decoration: underline;
+}
+
+
+/* ドロップダウンメニュー */
+.fa-angle-down{
+    color: #39622a;
+}
+
+.dlopdwon-menu{
+    position: relative;
+}
+
+.dlopdwon-menu ul{
+    display: none;
+}
+
+.dlopdwon-menu ul li{
+    display: block;
+}
+
+
+.dlopdwon-menu ul.block{
+  display: block;
+  /* position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%); */
+  padding: 0 3% 3%;
+  width: 200px;
+  box-sizing: border-box;
+}
+
+.dlopdwon-menu ul.block li{
+  border: 0;
+}
+
+.dlopdwon-menu ul.block a{
+  display: block;
+  text-align: center;
+  background-color: #f0f0f0;
+} 
+
+
+@media (min-width:992px){
+
+.dlopdwon-menu:hover ul{
+    display: block;
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-55%);
+    padding: 10px 15px;
+    width: 200px;
+    box-sizing: border-box;
+}
+
+.dlopdwon-menu:hover ul a{
+    display: block;
+    text-align: center;
+}
+}
+
+.company-note{
+    width: 213px;
+    line-height: 20px;
+    background-color: #39622a;
+    color: #fff;
+    text-align: center;
+    font-size: 0.96rem;
+    margin-bottom: 26px;
+}
+
+.header-contact--btn{
+   display: block; 
+   width: 100%;
+   position: relative;
+   line-height: 40px;
+   text-align: center;
+   background-color: #39622a;
+   font-weight: 700;
+   font-size: 1.4rem;
+}
+
+@media (min-width:992px){
+.header-contact--btn{
+    display: inline-block;
+    padding: 11px 42px;
+    width: unset;
+    line-height: unset;
+}
+}
+
+.header-contact--btn a{
+    display: block;
+    color: #fff;
+}
+
+
+.header-contact--btn .fa-angle-right{
+    font-size: 1.4rem;
+    color: #65af4b;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+}
+
+
+
+
+
+/* 
+ハンバーガー
+
+.h-menu {
+  background: #000;
+  color: #fff;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 100%;
+  padding-top: 70px;
+  transform: translateX(100%);
+  -webkit-transition: transform 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: transform 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.h-menu li {
+  font-size: 20px;
+  line-height: 2;
+}
+
+.h-menu li a {
+  padding-left: 15px;
+  display: block;
+}
+
+.open .h-back {
+  opacity: 0.5;
+  transform: translateX(0);
+}
+
+.open .h-menu {
+  transform: translateX(0);
+}
+ */
+
+
+
+
+
+
+
+/* Component
+---------------------------------------------------- */
+
+.mb00 {
+    margin-bottom: 0px !important;
+  }
+  
+  .mb10 {
+    margin-bottom: 5px !important;
+  }
+  
+  .mb12 {
+    margin-bottom: 6px !important;
+  }
+  
+  .mb15 {
+    margin-bottom: 7.5px !important;
+  }
+  
+  .mb20 {
+    margin-bottom: 10px !important;
+  }
+
+  .mb26 {
+    margin-bottom: 13px !important;
+  }
+  
+  .mb30 {
+    margin-bottom: 15px !important;
+  }
+  
+  .mb40 {
+    margin-bottom: 20px !important;
+  }
+  
+  .mb50 {
+    margin-bottom: 25px !important;
+  }
+  
+  .mb60 {
+    margin-bottom: 30px !important;
+  }
+  
+  .mb70 {
+    margin-bottom: 35px !important;
+  }
+  
+  .mb80 {
+    margin-bottom: 40px !important;
+  }
+  
+  .mb90 {
+    margin-bottom: 45px !important;
+  }
+  
+  .mb100 {
+    margin-bottom: 50px !important;
+  }
+  
+  
+  .mb110 {
+    margin-bottom: 85px !important;
+  }
+  
+  @media (min-width: 768px),
+  print{
+    .mb10 {
+      margin-bottom: 10px !important;
+    }
+  
+  
+    .mb12 {
+      margin-bottom: 12px !important;
+    }
+  
+    .mb15 {
+      margin-bottom: 15px !important;
+    }
+  
+    .mb20 {
+      margin-bottom: 20px !important;
+    }
+
+    .mb26 {
+      margin-bottom: 26px !important;
+    }
+  
+    .mb30 {
+      margin-bottom: 30px !important;
+    }
+  
+    .mb40 {
+      margin-bottom: 40px !important;
+    }
+  
+    .mb50 {
+      margin-bottom: 50px !important;
+    }
+  
+    .mb60 {
+      margin-bottom: 60px !important;
+    }
+  
+    .mb70 {
+      margin-bottom: 70px !important;
+    }
+  
+    .mb80 {
+      margin-bottom: 80px !important;
+    }
+  
+    .mb90 {
+      margin-bottom: 90px !important;
+    }
+  
+    .mb100 {
+      margin-bottom: 100px !important;
+    }
+  }
+  
+  /*---------------------------------------------------- */
+  
